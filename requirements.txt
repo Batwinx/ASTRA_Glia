@@ -1,0 +1,23 @@
+# Core ML
+torch==2.11.0+cu128
+torchvision==0.22.0+cu128
+torchaudio==2.8.0+cu128
+
+# LLM Inference
+llama-cpp-python==0.3.36
+
+# Vektordatenbank
+chromadb>=0.4.0
+numpy>=1.24.0
+
+# Embeddings
+sentence-transformers>=2.2.0
+
+# Konfiguration
+pyyaml>=6.0
+
+# HTTP für APIs
+requests>=2.31.0
+
+# Utilities
+tqdm>=4.66.0

@@ -1,0 +1,19 @@
+# ASTRA_Glia Hardware Profiles
+profiles:
+  school_5070_mobile:
+    gpu_name: "RTX 5070 Mobile"
+    vram_gb: 8
+    batch_size: 4
+    precision: "float16"
+    max_hidden_size: 512
+    enable_lora: true
+    
+  home_2080ti:
+    gpu_name: "RTX 2080 Ti"
+    vram_gb: 11
+    batch_size: 16
+    precision: "float16"
+    max_hidden_size: 1024
+    enable_lora: false
+
+auto_detect: true

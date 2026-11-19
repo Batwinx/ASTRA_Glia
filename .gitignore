@@ -1,0 +1,24 @@
+@"
+venv/
+.venv/
+__pycache__/
+*.pyc
+checkpoints/
+*.gguf
+*.pt
+*.pth
+*.safetensors
+*.sqlite3
+*.log
+*.jsonl
+.env
+.vscode/
+.idea/
+logs/
+.logs/
+memory/
+*.bin
+*.npy
+*.pickle
+*.migrated
+"@ | Set-Content -Encoding ascii .gitignore
