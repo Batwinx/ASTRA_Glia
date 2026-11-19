@@ -1,13 +1,20 @@
 # ASTRA_Glia
 
-Experimenteller Chat-Agent mit einem **dauerhaft laufenden Spiking Neural Network (SNN)**, das parallel zu einem lokalen Sprachmodell arbeitet.
+*Bio-inspirierter KI-Agent mit laufendem Spiking Neural Network · Bio-inspired AI agent with a continuously running spiking neural network*
 
-- **SNN:** Izhikevich-Neuronen mit Astrozyten-Modulation (Calcium-Kanäle auf drei Zeitskalen) und Stammzell-Neurogenese, die ausgebrannte Neuronen ersetzt. Eine Drei-Faktor-Lernregel koppelt Konsolidierungsereignisse an die Gewichte.
-- **Kortex:** lokales LLM (GGUF, via llama.cpp) mit Tool-Loop. Es entscheidet pro Frage, ob es direkt antwortet oder ein Tool nutzt.
-- **Gedächtnis:** Hippocampus-Modul mit Kurz- und Langzeitspeicher (ChromaDB, mehrsprachige Embeddings) für Wissen aus früheren Tool-Aufrufen.
-- **Tools:** Wetter (Open-Meteo), Websuche (DuckDuckGo), Wikipedia (deutsch). Alle live und ohne API-Key.
+[🇩🇪 Deutsch](#was-es-kann) · [🇬🇧 English](#what-it-does)
 
-Nutzereingaben lösen im SNN einen Salienz-Reiz aus. Das SNN läuft währenddessen ungestört weiter und meldet Konsolidierungen ans Gateway.
+## Was es kann
+
+ASTRA_Glia ist ein bio-inspirierter KI-Agent, der ein adaptives Izhikevich-Spiking-Netz mit Astrozyten-Modulation (drei Calcium-Kanäle für Gain, Homöostase und Konsolidierungs-Gate) sowie einer zweistufigen Stammzell-Reparatur mit einem Sprachmodell als entscheidendem Kortex koppelt. Er beantwortet Fragen wahlweise direkt, aus dem Vektor-Gedächtnis (ChromaDB-Hippocampus mit RAG) oder über schlüssellose Live-Tools für Wetter, Wikipedia und Websuche, deren Ergebnisse automatisch zu einer Antwort synthetisiert und als Wissens-Episode abgelegt werden. Nur geerdete Antworten werden langfristig konsolidiert, und ein zweistufiger RAG-Short-Circuit beantwortet gut getroffene Fachfragen direkt aus frischer Erinnerung.
+
+Nutzereingaben lösen im SNN einen Salienz-Reiz aus. Das Netz läuft währenddessen ungestört weiter und meldet Konsolidierungen ans Gateway.
+
+## What it does
+
+ASTRA_Glia is a bio-inspired AI agent that couples an adaptive Izhikevich spiking network — modulated by astrocytes across three calcium channels for gain, homeostasis and consolidation gating, plus a two-stage stem-cell repair mechanism — with a language model acting as its decision-making cortex. It answers questions either directly, from vector memory (a ChromaDB hippocampus with RAG), or via keyless live tools for weather, Wikipedia and web search, whose results are automatically synthesized into an answer and stored as a knowledge episode. Only grounded answers are consolidated into long-term memory, and a two-tier RAG short-circuit answers well-matched factual questions straight from fresh recall.
+
+*The rest of this README is in German. Quick start: create a venv, install PyTorch for your GPU, run `pip install -r requirements.txt`, put a GGUF model into `checkpoints/llm/`, then run `python main_chat.py`.*
 
 ## Voraussetzungen
 
